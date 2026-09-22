@@ -1,101 +1,86 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navLinks = [
+    { name: "About", link: "#about" },
+    { name: "Skills", link: "#skills" },
+    { name: "Projects", link: "#projects" },
+    { name: "Experience", link: "#experience" },
+    { name: "Contact", link: "#contact" },
+  ];
+
   return (
-    <>
-      <nav className="bg-[#0F172A] px-6 md:px-16 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#080D18]/90 backdrop-blur-md border-b border-gray-800">
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
 
         {/* Logo */}
-        <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-blue-400">
-            Nishtha <span className="text-blue-600">Sodha</span>
-          </h1>
-        </div>
+        <a
+          href="#home"
+          className="text-2xl font-bold text-white"
+        >
+          Nishtha<span className="text-purple-400">.</span>
+        </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-12 text-white font-medium">
-          <li>
-            <a href="#about" className="hover:text-indigo-400 transition">
-              About
-            </a>
-          </li>
+        <div className="hidden md:flex items-center gap-8">
 
-          <li>
-            <a href="#skills" className="hover:text-indigo-400 transition">
-              Skills
+          {navLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.link}
+              className="text-gray-300 hover:text-purple-400 transition duration-300"
+            >
+              {item.name}
             </a>
-          </li>
+          ))}
 
-          <li>
-            <a href="#projects" className="hover:text-indigo-400 transition">
-              Projects
-            </a>
-          </li>
+        </div>
 
-          <li>
-            <a href="#experience" className="hover:text-indigo-400 transition">
-              Experience
-            </a>
-          </li>
+        {/* Hire Me Button */}
+        <a
+          href="#contact"
+          className="hidden md:block bg-gradient-to-r from-purple-500 to-indigo-500 px-5 py-2.5 rounded-lg font-semibold text-white hover:scale-105 transition"
+        >
+          Hire Me
+        </a>
 
-          <li>
-            <a href="#contact" className="hover:text-indigo-400 transition">
-              Contact
-            </a>
-          </li>
-        </ul>
-
-        {/* Mobile Menu Icon */}
-        <div
-          className="md:hidden text-white text-3xl cursor-pointer"
+        {/* Mobile Menu Button */}
+        <button
           onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white text-2xl"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      </nav>
+        </button>
+
+      </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0F172A] text-white">
-          <ul className="flex flex-col items-center gap-6 py-6 font-medium">
+        <div className="md:hidden bg-[#0D1422] border-t border-gray-800">
 
-            <li>
-              <a href="#about" onClick={() => setMenuOpen(false)}>
-                About
+          <div className="flex flex-col px-6 py-6 gap-5">
+
+            {navLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-300 hover:text-purple-400"
+              >
+                {item.name}
               </a>
-            </li>
+            ))}
 
-            <li>
-              <a href="#skills" onClick={() => setMenuOpen(false)}>
-                Skills
-              </a>
-            </li>
+          </div>
 
-            <li>
-              <a href="#projects" onClick={() => setMenuOpen(false)}>
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a href="#experience" onClick={() => setMenuOpen(false)}>
-                Experience
-              </a>
-            </li>
-
-            <li>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>
-                Contact
-              </a>
-            </li>
-
-          </ul>
         </div>
       )}
-    </>
+
+    </nav>
   );
 }
 
