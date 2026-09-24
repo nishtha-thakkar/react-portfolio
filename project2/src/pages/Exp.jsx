@@ -2,10 +2,19 @@ import {
   FaLaptopCode,
   FaServer,
   FaGraduationCap,
+  FaBriefcase,
 } from "react-icons/fa";
 
 function Exp() {
   const journey = [
+    {
+      title: "Software Developer",
+      place: "AxionX Digital",
+      status: "1.5 Years Experience",
+      description:
+        "Working as a Software Developer at AxionX Digital, contributing to responsive and user-friendly web applications using React, JavaScript, HTML, CSS, Tailwind CSS and modern frontend development practices.",
+      icon: <FaBriefcase />,
+    },
     {
       title: "Frontend Development",
       place: "Professional Training",
@@ -47,7 +56,7 @@ function Exp() {
           </p>
 
           <h2 className="text-3xl sm:text-4xl font-bold">
-            Learning &{" "}
+            Experience &{" "}
             <span
               className="
                 bg-gradient-to-r
@@ -75,8 +84,8 @@ function Exp() {
           ></div>
 
           <p className="text-gray-400 max-w-2xl mx-auto mt-5 leading-7">
-            My journey from business education to building modern
-            web applications and expanding into full-stack development.
+            My professional experience, technical learning and educational
+            journey as I continue growing as a Software Developer.
           </p>
         </div>
 
@@ -85,7 +94,6 @@ function Exp() {
         <div className="relative">
 
           {/* Vertical Line */}
-
           <div
             className="
               hidden
@@ -103,7 +111,6 @@ function Exp() {
           ></div>
 
           <div className="space-y-8">
-
             {journey.map((item) => (
               <div
                 key={item.title}
@@ -159,7 +166,6 @@ function Exp() {
                 >
 
                   {/* Mobile Icon */}
-
                   <div
                     className="
                       md:hidden
@@ -178,7 +184,7 @@ function Exp() {
                     {item.icon}
                   </div>
 
-                  {/* Top */}
+                  {/* ================= TOP ================= */}
 
                   <div
                     className="
@@ -190,7 +196,6 @@ function Exp() {
                       gap-3
                     "
                   >
-
                     <div>
                       <h3 className="text-xl font-semibold text-white">
                         {item.title}
@@ -202,7 +207,6 @@ function Exp() {
                     </div>
 
                     {/* Status Badge */}
-
                     <span
                       className="
                         self-start
@@ -220,10 +224,9 @@ function Exp() {
                     >
                       {item.status}
                     </span>
-
                   </div>
 
-                  {/* Description */}
+                  {/* ================= DESCRIPTION ================= */}
 
                   <p
                     className="
@@ -240,7 +243,6 @@ function Exp() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
 

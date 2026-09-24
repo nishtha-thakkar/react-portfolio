@@ -87,7 +87,7 @@ function About() {
                 text-base
               "
             >
-              I'm a Frontend Developer focused on creating responsive,
+              I'm a software Developer focused on creating responsive,
               user-friendly and visually appealing web applications.
               I enjoy turning ideas and designs into functional websites
               using modern frontend technologies.
@@ -239,7 +239,7 @@ function About() {
                   </p>
 
                   <p className="text-sm font-medium mt-1">
-                    Frontend Development
+                    software Development
                   </p>
                 </div>
               </div>

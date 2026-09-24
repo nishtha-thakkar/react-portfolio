@@ -19,8 +19,8 @@ function Hero() {
         items-center
         px-6
         md:px-10
-        pt-28
-        pb-16
+        pt-24
+        pb-12
         overflow-hidden
       "
     >
@@ -31,8 +31,8 @@ function Hero() {
           w-full
           grid
           md:grid-cols-2
-          gap-12
-          lg:gap-20
+          gap-10
+          lg:gap-16
           items-center
         "
       >
@@ -101,7 +101,7 @@ function Hero() {
               mt-5
             "
           >
-            Frontend Developer
+            Software Developer
           </h2>
 
           {/* Description */}
@@ -117,8 +117,8 @@ function Hero() {
               md:mx-0
             "
           >
-            I create clean, responsive and user-friendly web experiences
-            using React, JavaScript and modern frontend technologies.
+            I create clean, responsive and user-friendly web applications
+            using React, JavaScript and modern web technologies.
           </p>
 
           {/* ================= BUTTONS ================= */}
@@ -134,7 +134,6 @@ function Hero() {
               md:justify-start
             "
           >
-            {/* View Projects */}
             <a
               href="#projects"
               className="
@@ -157,11 +156,9 @@ function Hero() {
               "
             >
               View Projects
-
               <FaArrowRight className="text-sm" />
             </a>
 
-            {/* Contact */}
             <a
               href="#contact"
               className="
@@ -197,80 +194,56 @@ function Hero() {
               md:justify-start
             "
           >
-            {/* GitHub */}
-            <a
+            {/* <a
               href="https://github.com/nishtha-thakkar"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
               className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-gray-700
-                flex
-                items-center
-                justify-center
+                w-10 h-10 rounded-lg border border-gray-700
+                flex items-center justify-center
                 text-gray-400
                 hover:text-white
                 hover:border-purple-500
                 hover:bg-purple-500/10
                 hover:-translate-y-1
-                transition
-                duration-300
+                transition duration-300
               "
             >
               <FaGithub size={18} />
-            </a>
+            </a> */}
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/nishtha-sodha"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
               className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-gray-700
-                flex
-                items-center
-                justify-center
+                w-10 h-10 rounded-lg border border-gray-700
+                flex items-center justify-center
                 text-gray-400
                 hover:text-white
                 hover:border-purple-500
                 hover:bg-purple-500/10
                 hover:-translate-y-1
-                transition
-                duration-300
+                transition duration-300
               "
             >
               <FaLinkedinIn size={18} />
             </a>
 
-            {/* Email */}
             <a
               href="#contact"
               aria-label="Contact"
               className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-gray-700
-                flex
-                items-center
-                justify-center
+                w-10 h-10 rounded-lg border border-gray-700
+                flex items-center justify-center
                 text-gray-400
                 hover:text-white
                 hover:border-purple-500
                 hover:bg-purple-500/10
                 hover:-translate-y-1
-                transition
-                duration-300
+                transition duration-300
               "
             >
               <FaEnvelope size={18} />
@@ -293,44 +266,44 @@ function Hero() {
           <div
             className="
               absolute
-              w-[270px]
-              h-[270px]
+              w-[330px]
+              h-[330px]
               bg-purple-600/20
               rounded-full
-              blur-[80px]
+              blur-[90px]
             "
           ></div>
 
-          {/* Photo Wrapper */}
           <div className="relative">
 
-            {/* Decorative Border Behind Photo */}
+            {/* Circular decorative border */}
             <div
               className="
                 absolute
                 -inset-3
+                rounded-full
                 border
                 border-purple-500/30
-                rounded-3xl
-                rotate-3
               "
             ></div>
 
-            {/* Photo Card */}
+            {/* ROUND PHOTO */}
             <div
               className="
                 relative
-                w-[230px]
-                h-[280px]
-                sm:w-[260px]
-                sm:h-[315px]
-                rounded-3xl
+                w-[250px]
+                h-[250px]
+                sm:w-[300px]
+                sm:h-[300px]
+                lg:w-[330px]
+                lg:h-[330px]
+                rounded-full
                 overflow-hidden
-                border
-                border-gray-700
+                border-2
+                border-purple-500/50
                 bg-[#111827]
                 shadow-2xl
-                shadow-purple-900/20
+                shadow-purple-900/30
               "
             >
               <img
@@ -345,19 +318,19 @@ function Hero() {
               />
             </div>
 
-            {/* React Developer Badge */}
+            {/* Software Developer Badge */}
             <div
               className="
                 absolute
-                -bottom-5
+                bottom-3
                 -left-5
-                sm:-left-8
+                sm:-left-10
                 bg-[#111827]/95
                 backdrop-blur-md
                 border
                 border-gray-700
                 rounded-xl
-                px-4
+                px-5
                 py-3
                 shadow-xl
               "
@@ -371,20 +344,20 @@ function Hero() {
                   mb-1
                 "
               >
-                FRONTEND
+                SOFTWARE
               </p>
 
               <p className="text-sm text-white font-semibold">
-                React Developer
+                Software Developer
               </p>
             </div>
 
-            {/* Decorative Purple Dot */}
+            {/* Decorative Dot */}
             <div
               className="
                 absolute
-                -top-4
-                -right-4
+                top-4
+                right-3
                 w-3
                 h-3
                 bg-purple-500

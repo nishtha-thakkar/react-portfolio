@@ -15,6 +15,7 @@ function Projects() {
       technologies: ["React", "Redux Toolkit", "Axios", "Tailwind CSS"],
       github:
         "https://github.com/nishtha-thakkar/react-e-commerce-website",
+        live: " https://e-commerce-three-liard-28.vercel.app",
       icon: <FaReact />,
     },
 
@@ -25,6 +26,7 @@ function Projects() {
       technologies: ["HTML", "CSS", "JavaScript"],
       github:
         "https://github.com/nishtha-thakkar/Javascript/tree/main/project/rapid-shop",
+        live : "https://rapid-shop-8opuc4xwl-nishtha17.vercel.app",
       icon: <FaJs />,
     },
 
@@ -256,7 +258,26 @@ function Projects() {
                   >
                     <FaGithub />
 
-                    View project
+                    View code
+                  </a>
+
+                   <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      flex
+                      items-center
+                      gap-2
+                      text-sm
+                      text-gray-300
+                      hover:text-purple-400
+                      transition
+                    "
+                  >
+                    <FaGithub />
+
+                    live demo
                   </a>
 
                   <FaArrowRight

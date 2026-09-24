@@ -50,7 +50,7 @@ function Footer() {
             </a>
 
             <p className="text-gray-500 text-sm mt-2">
-              Frontend Developer
+              software Developer
             </p>
 
           </div>
