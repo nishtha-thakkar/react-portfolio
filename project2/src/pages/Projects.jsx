@@ -256,7 +256,7 @@ function Projects() {
                   >
                     <FaGithub />
 
-                    View Code
+                    View project
                   </a>
 
                   <FaArrowRight
